@@ -5,7 +5,7 @@
 
 <div align="center">
     <a href="https://github.com/Dinoattitude/JavadocFormatter">
-        <img src="readme-images/logo.png" alt="Logo" width="60%">
+        <img src="readme-images/logo.PNG" alt="Logo" width="60%">
     </a>
 </div>
 
@@ -19,7 +19,7 @@ Il est écrit en python et l'interpréteur est sur la version 3.9.
 
 <div align="center">
     <a href="https://github.com/Dinoattitude/JavadocFormatter">
-        <img src="readme-images/product-screenshot.png" alt="Logo" width="70%">
+        <img src="readme-images/product-screenshot.PNG" alt="screenshot" width="70%">
     </a>
 </div>
 
