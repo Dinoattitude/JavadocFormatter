@@ -37,7 +37,7 @@ Il est écrit en python et l'interpréteur est sur la version 3.9.
 <!-- LICENSE -->
 ## License
 
-Distribué sous la licence publique générale GNU v3.0. Voir `LICENSE` pour plus d'informations.
+Distribué sous la licence publique générale GNU v2.0. Voir `LICENSE` pour plus d'informations.
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
