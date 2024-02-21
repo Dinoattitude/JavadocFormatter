@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --clr-blue-h: #111827;
+    --clr-blue-m: #0f5a75;
+    --clr-blue-l: #c4cbe0;
+    --clr-white-h: #e5e7eb;
+    --clr-white-l: #f1f1f1;
+    --clr-white-s: #e8e7e7;
+    --clr-grey-h: #374151;
+    --clr-gray-l: #9ca3af;
+
+    --clr-link: #7f3974;
+    --clr-details: #00AA92;
+
+    --fs-xl: 2rem;
+    --fs-l: 1.5rem;
+    --fs-m: 1rem;
+    --fs-d: .9rem;
+    --fs-s: .5rem;
+    --fs-xs: .35rem;
+
+    --ff: "Poppins" , sans-serif;
+}
+
+code {
+    font-family: var(--ff);
+    font-size: var(--fs-d);
+}
+
+body {
+    font-family: var(--ff);
+    box-sizing: border-box;
+    margin: auto;
+    background-color: var(--clr-white-l);
+}
+
+footer {
+    display: none;
+}
+
+h1 {
+    font-size: var(--fs-xl);
+}
+
+h2 {
+    font-size: var(--fs-l);
+    text-decoration: none;
+}
+
+h3 {
+    font-size: var(--fs-m);
+}
+
+h4 {
+    font-size: var(--fs-s);
+}
+
+h5 {
+    font-size: var(--fs-xs);
+}
+
+li {
+    list-style: none;
+}
+
+ul.sub-nav-list {
+    margin: 0;
+}
+
+/* Skip navigation a href */
+.skip-nav {
+    display: none;
+}
+
+/* Sub navigation menu */
+.sub-nav {
+    text-align: right;
+}
+
+.sub-nav li {
+    display: inline;
+}
+
+/* Custom nav icon */
+.fas {
+    padding-right: 20px;
+}
+.far {
+    padding-right: 20px;
+}
+
+/* The side navigation menu */
+.nav-list {
+    margin: 0;
+    padding: 10px;
+    width: 200px;
+    background-color: var(--clr-blue-h);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Sidebar links */
+.nav-list li {
+    display: block;
+    color: var(--clr-grey-h);
+    padding: 16px;
+    text-decoration: none;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.nav-list li:has(a) a,
+.nav-list li:has(a) .fas,
+.nav-list li:has(a) .far{
+    color: var(--clr-white-h);
+}
+
+/* Active/current link */
+.nav-list li.nav-bar-cell1-rev {
+    background-color: var(--clr-grey-h);
+    color: var(--clr-white-h);
+    border-radius: 5px;
+    padding-left: 25px;
+}
+
+/* Links on mouse-over */
+.nav-list li:hover:not(.nav-bar-cell1-rev) {
+    background-color: var(--clr-grey-h);
+    color: var(--clr-white-h);
+    border-radius: 5px;
+}
+
+/* Bottom nav list */
+#navbar\.bottom\.firstrow {
+    display: none;
+}
+
+/* Page content */
+main {
+    margin-left: 220px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .nav-list {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .nav-list li {
+        float: left;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .nav-list li.nav-bar-cell1-rev {
+        border-radius: 0;
+        padding-left: 15px;
+        margin: 0;
+    }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .nav-list li {
+        text-align: center;
+        float: none;
+    }
+}
+
+/* Unset spacing for summary tables */
+.summary-table {
+    border-spacing: unset;
+}
+
+#all-packages-table,
+#class-summary,
+#related-package-summary {
+    padding-bottom: 2rem;
+}
+
+/* Margins for the sections */
+.method-details,
+.constructor-details,
+.constructor-summary {
+    padding-bottom: 2rem;
+}
+
+.caption {
+    background-color: var(--clr-blue-h) !important;
+    color: var(--clr-white-h);
+}
+
+/* Buttons like method summary */
+.table-tabs,
+.caption {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    box-shadow: rgba(99, 99, 99, 0.5) 0 2px 8px 0;
+}
+
+.table-tabs button,
+.caption {
+    padding: 8px 30px;
+    border: none;
+    background-color: var(--clr-white-h);
+    font-family: var(--ff);
+    font-size: var(--fs-d);
+}
+
+.active-table-tab {
+    background-color: var(--clr-blue-h) !important;
+    color: var(--clr-white-h);
+}
+
+/* Tables */
+.method-summary .summary-table {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.summary-table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid var(--clr-white-s);
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+.summary-table .table-header {
+    font-weight: 600;
+}
+
+.summary-table > *{
+    padding: 15px;
+}
+
+.summary-table .even-row-color {
+    background-color: var(--clr-white-h);
+}
+
+/* Method details */
+ul.member-list {
+    padding-inline-start: 2rem;
+}
+
+ul.member-list li {
+    background-color: var(--clr-white-h);
+    padding: 1px 7px 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 6px var(--clr-blue-h) solid;
+}
+
+ul.member-list li .detail h3 {
+    color: var(--clr-blue-h);
+}
+
+ul.member-list li .detail .block {
+    color: var(--clr-details);
+    font-style: italic;
+}
+
+/* Description ( Since / Version / Author...) */
+.class-description {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 2.5rem;
+    padding: 1rem;
+    border: 1px solid var(--clr-white-s);
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+    width: fit-content;
+}
+
+.class-description hr {
+    display: none;
+}
+
+.class-description .notes dt {
+    margin: 0;
+    padding-right: 7px;
+    color: var(--clr-blue-h);
+    font-weight: bold;
+}
+
+.class-description .notes dd {
+    margin: 0;
+    padding-right: 25px;
+    padding-left: 1rem;
+}
+
+.class-description .block {
+    color: var(--clr-details);
+}
+
+/* Webkit links */
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-link);
+    font-weight: 600;
+}
+
+/* Links hover */
+a[href]:hover, a[href]:focus {
+    text-decoration:none;
+    color: var(--clr-gray-l);
+}
+
+/* SEARCH */
+.nav-list-search {
+    position: relative;
+}
+
+#search-input {
+    margin-top: 10px;
+    padding: 16px;
+    border-radius: 5px;
+    border: none;
+    font-family: var(--ff);
+    font-weight: 600;
+    color: var(--clr-blue-h);
+    width: 84%;
+}
+#reset-button {
+    background-color: var(--clr-white-h);
+    background-image: url('resources/x.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    border: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    top: 42%;
+    font-size: 0;
+    border-radius: 25px;
+}
+
